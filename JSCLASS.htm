@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <h1 id="h2"></h1>
+
+    <script>
+        class student{
+            constructor(fname,lname,Birthyear){
+                this.fname=fname;
+                this.lname=lname;
+                this.Birthyear=Birthyear;
+            }
+            age(x){
+                //let date=new Date();
+                return x-this.Birthyear;                         //date.getFullYear()-this.Birthyear;
+            }
+            fullname(){
+                return this.fname+" "+this.lname;
+            }
+        }
+        let year=new Date().getFullYear();
+
+        student2=new student("Suthan","Suthakar",1999);
+        student1=new student("Raj","Srishna",1998);
+        document.getElementById("h1").innerHTML="FULL NAME IS :- " + student2.fullname() + "  HIS/HER AGE IS :-  " + student2.age(year);
+        document.getElementById("h2").innerHTML="FULL NAME IS :- " +student1.fullname() + "  HIS/HER AGE IS :-  " + student1.age(year);
+    </script>
+</body>
+</html>
